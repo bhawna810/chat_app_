@@ -1,0 +1,5 @@
+package com.example.peer_to_peer.modal;
+
+public class LoginModal {
+
+}

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="MavenProjectImportWizardPage">
+		<list key="rootDirectory">
+			<item value="/Users/bhawna/Documents/chat_application2_backend/authentication"/>
+			<item value="/Users/bhawna/Documents/chat_application2_backend/gateway"/>
+			<item value="/Users/bhawna/Documents/chat_application2_backend/peer-to-peer"/>
+			<item value="/Users/bhawna/Documents/chat_application2_backend/demo"/>
+			<item value="/Users/bhawna/Downloads/authentication"/>
+			<item value="/Users/bhawna/Documents/chat_application2_backend/discovery-service"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+	<section name="org.eclipse.m2e.core.pom.overview">
+	</section>
+	<section name="org.eclipse.m2e.core.pom.dependencies">
+	</section>
+</section>
