@@ -2,6 +2,9 @@
 <section name="Workbench">
 	<section name="MavenProjectImportWizardPage">
 		<list key="rootDirectory">
+			<item value="/Users/bhawna/Documents/chat_application2_backend/user-events"/>
+			<item value="/Users/bhawna/Documents/chat_application2_backend/search"/>
+			<item value="/Users/bhawna/Documents/chat_application2_backend/Search"/>
 			<item value="/Users/bhawna/Documents/chat_application2_backend/authentication"/>
 			<item value="/Users/bhawna/Documents/chat_application2_backend/gateway"/>
 			<item value="/Users/bhawna/Documents/chat_application2_backend/peer-to-peer"/>

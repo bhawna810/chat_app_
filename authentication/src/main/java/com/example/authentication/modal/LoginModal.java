@@ -52,6 +52,11 @@ public class LoginModal implements UserDetails {
     public String getPassword() {
         return password;
     }
+    
+ 
+    public Long getId() {
+        return id;
+    }
 
     @Override
     public String getUsername() {
@@ -112,6 +117,7 @@ public class LoginModal implements UserDetails {
     public void setImage(String image) {
         this.image = image;
     }
+    
 }
 
 

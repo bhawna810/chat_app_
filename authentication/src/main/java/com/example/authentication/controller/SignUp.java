@@ -7,10 +7,13 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+//import com.example.authentication.modal.Event;
+import com.example.user_events.UserCreatedEvent;
 import com.example.authentication.modal.JwtResponse;
 import com.example.authentication.modal.LoginModal;
 import com.example.authentication.repository.LoginRepository;
 import com.example.authentication.services.JwtService;
+import com.example.authentication.services.UserEventProducer;
 
 import jakarta.servlet.http.Cookie;
 import jakarta.servlet.http.HttpServletResponse;
@@ -24,6 +27,9 @@ public class SignUp {
 	
 	@Autowired
 	private JwtService jwtService;
+	
+	@Autowired
+	private UserEventProducer userEventProducer;
 
 	@PostMapping("/signUp")
 	public ResponseEntity<JwtResponse> signUpMethod(@RequestBody LoginModal user, HttpServletResponse response){
@@ -35,6 +41,17 @@ public class SignUp {
 			}
 			
 			LoginModal savedUser =  loginRepository.save(user);
+			
+			System.out.println("saved user id value " + savedUser.getId());
+			
+			UserCreatedEvent event = new UserCreatedEvent(
+					savedUser.getId(),
+					savedUser.getUsername()
+			);
+			
+			
+			userEventProducer.sendUserEvent(event);
+			
 			
 			String jwtToken =jwtService.generateToken(savedUser);
 			String jwtResfreshtoken = jwtService.generateResfreshToken(savedUser);
